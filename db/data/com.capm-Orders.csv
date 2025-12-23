@@ -1,0 +1,4 @@
+ID,orderNumber,orderDate,totalAmount,status,createdAt,createdBy,modifiedAt,modifiedBy
+101,ORD001,2025-12-20,550.00,Pending,2025-12-20T10:00:00Z,Nikita,2025-12-20T12:00:00Z,Nikita
+102,ORD002,2025-12-21,250.00,Completed,2025-12-21T11:00:00Z,Nikita,2025-12-21T15:00:00Z,Nikita
+103,ORD003,2025-12-22,900.00,Pending,2025-12-22T09:30:00Z,Nikita,2025-12-22T14:00:00Z,Nikita

@@ -1,0 +1,53 @@
+{
+  "xsappname": "capm-app",
+  "tenant-mode": "dedicated",
+  "description": "Security profile for CAPM Application",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Administrator with full access"
+    },
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Viewer with read-only access"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Admin",
+      "description": "Administrator Role Template",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    },
+    {
+      "name": "Viewer",
+      "description": "Viewer Role Template",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "CAPM_Admin",
+      "description": "Admin Role Collection for full access",
+      "role-template-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    },
+    {
+      "name": "CAPM_Viewer",
+      "description": "Viewer Role Collection for read-only access",
+      "role-template-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://*.cfapps.*.hana.ondemand.com/**"
+    ]
+  },
+  "attributes": []
+}
